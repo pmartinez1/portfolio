@@ -66,6 +66,22 @@ h1{
 .line {
   color: #A5ACAF;
 }
+
+.ratings{
+
+
+}
+
+.thumbs-up{
+  width:2em;
+  height: 2em;
+}
+
+.thumbs-down{
+  width: 2em;
+  height: 2em;
+}
+
 #projects{
   margin: auto;
   width: 80%;
