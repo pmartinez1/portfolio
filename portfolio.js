@@ -43,17 +43,16 @@ projects.forEach(function(a){
   $('#projects').append(a.toHtml());
 });
 
-var thumbsUpCount = 0;
-$(document).ready(function(){
-  $('.thumbs-up').click(function (){
-    thumbsUpCount+= 1;
-  });
-});
+// var test = this.publishedOn;
+// $newProject.find('.count-up').addClass(test);
+// var thumbsUpCount = 0;
+//   $('.thumbs-up').click(function (){
+//     thumbsUpCount+= 1;
+//     $newProject.find('.count-up.'+ test).html(thumbsUpCount);
+//   });
 
-var thumbsDownCount = 0;
-$(document).ready(function(){
-  $('.thumbs-down').click(function (){
-    thumbsDownCount+= 1;
-$('.t')
-  });
-});
+// var thumbsDownCount = 0;
+//   $('.thumbs-down').click(function (){
+//     thumbsDownCount+= 1;
+//   $newProject.find('.count-down').html(thumbsDownCount);
+//   });
