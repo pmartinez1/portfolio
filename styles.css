@@ -72,6 +72,16 @@ h1{
 
 }
 
+.count-up{
+  display: inline-block;
+  font-style: italic;
+}
+
+.count-down{
+  display: inline-block;
+  font-style: italic;
+}
+
 .thumbs-up{
   width:2em;
   height: 2em;
