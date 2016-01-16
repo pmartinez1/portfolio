@@ -1,3 +1,11 @@
+.button-one{
+  color:blue;
+}
+
+.button-two{
+  color: red;
+}
+
 body{
   background: linear-gradient(to bottom right,#DCDCDC,#F0FFFF);
   padding: 1em;
