@@ -42,6 +42,7 @@ placeHolder.forEach(function(ele) {
 projects.forEach(function(a){
   $('#projects').append(a.toHtml());
 });
+
 //had to make a change
 // var test = this.publishedOn;
 // $newProject.find('.count-up').addClass(test);

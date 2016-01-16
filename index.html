@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pablo's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="layout.css">
   </head>
     <header class="top-header">
         <h1>Welcome to my Online Portfolio</h1>
@@ -14,16 +15,8 @@
     <a href="https://github.com/pmartinez1" target="new">GitHub</a>
     <a href="https://twitter.com/pablomartinez__" target="new">Twitter</a>
     <a href="https://www.linkedin.com/in/pablomartinez1" target="new">LinkedIn</a>
-    <
   </nav>
   <main>
-      <section class="about-me">
-        <p>
-          <img src="pic.jpeg" alt="" width="15%" height="15%" class = "pic"/>I hope that you are interested in seeing my growth on my journey to learning how to properly build web apps. My site will easily allow you to see my progress on my journey.
-          Please feel free to leave a comment under my projects with any feedback that you may want to share with me. I look forward to reading your comments!
-        </p>
-      </section>
-
       <section id="projects">
           <article class="template" data-category="cat">
             <header>
@@ -44,15 +37,19 @@
             <section class="project-body"></section>
           </article>
         </section>
-  
+        <section class="about-me">
+          <p>
+            <img src="pic.jpeg" alt="" width="15%" height="15%" class = "pic"/>I hope that you are interested in seeing my growth on my journey to learning how to properly build web apps. My site will easily allow you to see my progress on my journey.
+            Please feel free to leave a comment under my projects with any feedback that you may want to share with me. I look forward to reading your comments!
+          </p>
+        </section>
   </main>
 <footer class="feedback">
 <!-- idea: add a place where users can provide feedback via email -->
 </footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="placeholder.js" charset="utf-8"></script>
   <script src="portfolio.js" charset="utf-8"></script>
-
   </script>
   </body>
 </html>

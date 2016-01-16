@@ -10,7 +10,6 @@ function Article(properties){
   this.body = properties.body;
 }
 
-
 for (var i =0; i<blog.rawData.length; i++){
   var article = new Article(blog.rawData[i]);
   blog.articles.push(article);

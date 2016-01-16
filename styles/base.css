@@ -1,0 +1,32 @@
+body{
+  background: linear-gradient(to bottom right,#DCDCDC,#F0FFFF);
+  padding: 1em;
+}
+
+a{
+  padding: .25em;
+}
+
+a:link{
+  color:#69BE28;
+}
+
+a:hover{
+  color: #FFFFFF;
+}
+
+a:active{
+  color: #FB4F14;
+}
+
+h3{
+  margin: none;
+}
+
+hr {
+  width: 100%;
+}
+
+h1{
+  color:#A5ACAF;
+}
