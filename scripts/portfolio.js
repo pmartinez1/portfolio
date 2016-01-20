@@ -23,7 +23,7 @@ Project.prototype.toHtml = function() {
   $newProject.find('time[pubdate]').attr('title', this.publishedOn);
 
   $newProject.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
-
+  $newProject.append('<a class="more">MORE</a>');
   $newProject.append('<hr>');
 
   $newProject.removeClass('template');
@@ -40,8 +40,43 @@ placeHolder.forEach(function(ele) {
 });
 
 projects.forEach(function(a){
-  $('#projects').append(a.toHtml());
+  $('.projects').append(a.toHtml());
 });
+
+$(document).ready(function(){
+  $('#home-btn').click(function(){
+    $('.about-me').addClass('hide');
+    $('.projects').removeClass('hide');
+  }
+);});
+$(document).ready(function(){
+  $('#about-btn').click(function(){
+    $('.projects').addClass('hide');
+    $('.about-me').removeClass('hide');
+  }
+);});
+
+var articleFunctions = {};
+
+articleFunctions.setTeasers = function() {
+  $('.project-body *:nth-of-type(n+2)').hide(); // Hide elements beyond the first 2 in any artcile body.
+  $('.projects').on('click','.more', function(event){
+    event.preventDefault();
+    $(this).parent().find('*').show();
+    $(this).replaceWith('<a class="less">LESS</a>');
+  });
+};
+
+articleFunctions.removeTeasers = function(){
+  $('.projects').on('click','.less', function(event){
+    event.preventDefault();
+    $('.project-body *:nth-of-type(n+2)').hide();
+    $(this).replaceWith('<a class="more">MORE</a>');
+  });
+};
+
+articleFunctions.setTeasers();
+articleFunctions.removeTeasers();
 
 //had to make a change
 // var test = this.publishedOn;

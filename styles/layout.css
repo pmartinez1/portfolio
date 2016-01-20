@@ -1,3 +1,12 @@
+.navigation {
+  margin: auto;
+  display: table;
+}
+.navigation img{
+  width:3em;
+  height:3em;
+  padding: .5em;
+}
 .button-one{
   color:blue;
 }
@@ -15,7 +24,10 @@
 .about-me{
   width: 50%;
   margin: auto;
+  margin-top: 1em;
   padding-bottom: 2em;
+  border-width: thin;
+  border-style: groove;
 }
 
 .template{
@@ -67,7 +79,7 @@
   height: 2em;
 }
 
-#projects{
+.projects{
   margin: auto;
   width: 80%;
   height: 50em;
