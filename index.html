@@ -4,26 +4,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pablo's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/state.css">
   </head>
     <header class="top-header">
         <h1>Welcome to my Online Portfolio</h1>
     </header>
 <body class="entire-page">
+  <nav class="navigation">
+    <img src="images/Home.png" alt="" id="home-btn" />
+    <img src="images/about.png" alt="" id="about-btn"/>
+  </nav>
   <nav class="social">
     <a href="https://github.com/pmartinez1" target="new">GitHub</a>
     <a href="https://twitter.com/pablomartinez__" target="new">Twitter</a>
     <a href="https://www.linkedin.com/in/pablomartinez1" target="new">LinkedIn</a>
   </nav>
   <main>
-      <section class="about-me">
-        <p>
-          <img src="pic.jpeg" alt="" width="15%" height="15%" class = "pic"/>I hope that you are interested in seeing my growth on my journey to learning how to properly build web apps. My site will easily allow you to see my progress on my journey.
-          Please feel free to leave a comment under my projects with any feedback that you may want to share with me. I look forward to reading your comments!
-        </p>
-      </section>
-
-      <section id="projects">
+      <section class="projects">
           <article class="template" data-category="cat">
             <header>
               <h1>Title</h1>
@@ -31,23 +30,31 @@
                 By <address><a href="">Author Name</a></address>
                 published <time pubdate datetime="2000-01-01">Publish Time</time>
               </div>
-              <div class="ratings">
-                <img src="thumbsUp.svg" alt="" class ="thumbs-up"/>
-
-                <img src="thumbsDown.svg" alt="" class ="thumbs-down"/>
-                
+              <div class="images/ratings">
+                <img src="images/thumbsUp.svg" alt="" class ="thumbs-up"/>
+                <div class="count-up">
+                </div>
+                <img src="images/thumbsDown.svg" alt="" class ="thumbs-down"/>
+                <div class="count-down">
+                </div>
               </div>
             </header>
             <section class="project-body"></section>
           </article>
         </section>
-
+        <footer class="about-me">
+          <p>
+            <img src="images/pic.jpeg" alt="" width="15%" height="15%" class = "pic"/>I hope that you are interested in seeing my growth on my journey to learning how to properly build web apps. My site will easily allow you to see my progress on my journey.
+            Please feel free to leave a comment under my projects with any feedback that you may want to share with me. I look forward to reading your comments!
+          </p>
+        </footer>
   </main>
-<footer class="feedback">
+<!-- <footer class="feedback"> -->
 <!-- idea: add a place where users can provide feedback via email -->
 </footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="placeholder.js" charset="utf-8"></script>
-  <script src="portfolio.js" charset="utf-8"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="scripts/projects.js" charset="utf-8"></script>
+  <script src="scripts/portfolio.js" charset="utf-8"></script>
+  </script>
   </body>
 </html>

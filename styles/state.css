@@ -1,0 +1,6 @@
+.hide {
+  display: none;
+}
+.more, .less {
+  opacity: 1;
+}
