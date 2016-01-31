@@ -11,13 +11,6 @@ a:link{
   color:#69BE28;
 }
 
-a:hover{
-  color: #FFFFFF;
-}
-
-a:active{
-  color: #FB4F14;
-}
 
 h3{
   margin: none;
@@ -30,4 +23,8 @@ hr {
 h1{
   /*color:#A5ACAF;*/
   color:#535353
+}
+
+.pablo-pic{
+  float: right;
 }
