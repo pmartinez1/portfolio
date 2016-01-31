@@ -1,3 +1,13 @@
+@media screen and (max-width: 760px){
+  .about-me{
+    min-width: 80%;
+  }
+}
+
+/*
+Navigation Menu Styles
+*/
+
 .navigation {
   margin: auto;
   display: table;
@@ -7,6 +17,16 @@
   height:3em;
   padding: .5em;
 }
+
+.social{
+  display: table;
+  margin: auto;
+  font-weight: bold;
+}
+
+/*
+Button Styles
+*/
 .button-one{
   color:blue;
 }
@@ -15,6 +35,9 @@
   color: red;
 }
 
+/*
+Content Styles
+*/
 .top-header{
   display: table;
   margin: auto;
@@ -25,7 +48,6 @@
   width: 50%;
   margin: auto;
   margin-top: 1em;
-  padding-bottom: 2em;
   border-width: thin;
   border-style: groove;
 }
@@ -34,18 +56,14 @@
   display: none;
 }
 
-.social{
-  display: table;
-  margin: auto;
-  font-weight: bold;
-}
-
 .pull-left {
   float: left;
+  max-width: 20%;
 }
 
 .pull-right {
   float: right;
+  max-width: 20%;
 }
 
 .line {
@@ -57,26 +75,6 @@
 
 }
 
-.count-up{
-  display: inline-block;
-  font-style: italic;
-}
-
-.count-down{
-  display: inline-block;
-  font-style: italic;
-}
-
-.thumbs-up{
-  width:2em;
-  height: 2em;
-}
-
-.thumbs-down{
-  width: 2em;
-  height: 2em;
-}
-
 .projects{
   margin: auto;
   width: 80%;
@@ -84,15 +82,7 @@
   overflow: scroll;
   background: linear-gradient(#002244,white);
 }
-
-@media only screen and (max-width: 760px){
-  .pull-left {
-    float: left;
-    width:100%;
-  }
-  .pull-right {
-    float: right;
-    width:50%;
-  }
-
+.pablo-pic{
+  float: right;
+  width: 15%;
 }
