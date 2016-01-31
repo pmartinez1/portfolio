@@ -1,0 +1,14 @@
+.hide {
+  display: none;
+}
+.more, .less {
+  opacity: 1;
+}
+
+a:hover{
+  color: #FFFFFF;
+}
+
+a:active{
+  color: #FB4F14;
+}

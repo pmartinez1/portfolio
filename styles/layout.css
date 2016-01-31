@@ -1,0 +1,88 @@
+@media screen and (max-width: 760px){
+  .about-me{
+    min-width: 80%;
+  }
+}
+
+/*
+Navigation Menu Styles
+*/
+
+.navigation {
+  margin: auto;
+  display: table;
+}
+.navigation img{
+  width:3em;
+  height:3em;
+  padding: .5em;
+}
+
+.social{
+  display: table;
+  margin: auto;
+  font-weight: bold;
+}
+
+/*
+Button Styles
+*/
+.button-one{
+  color:blue;
+}
+
+.button-two{
+  color: red;
+}
+
+/*
+Content Styles
+*/
+.top-header{
+  display: table;
+  margin: auto;
+  color: #002244;
+}
+
+.about-me{
+  width: 50%;
+  margin: auto;
+  margin-top: 1em;
+  border-width: thin;
+  border-style: groove;
+}
+
+.template{
+  display: none;
+}
+
+.pull-left {
+  float: left;
+  max-width: 20%;
+}
+
+.pull-right {
+  float: right;
+  max-width: 20%;
+}
+
+.line {
+  color: #A5ACAF;
+}
+
+.ratings{
+
+
+}
+
+.projects{
+  margin: auto;
+  width: 80%;
+  height: 50em;
+  overflow: scroll;
+  background: linear-gradient(#002244,white);
+}
+.pablo-pic{
+  float: right;
+  width: 15%;
+}
