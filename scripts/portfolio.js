@@ -10,25 +10,17 @@ function Project (opts) {
 }
 
 Project.prototype.toHtml = function() {
-  var $newProject = $('article.template').clone();
+  var projectTemplate = $('#project-template').html();
+  var compileTemplate = Handlebars.compile(projectTemplate);
 
-  $newProject.attr('data-category', this.category);
+  this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
+  this.publishStatus = this.publishedOn ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
+  this.more = '<a class="more">MORE</a>';
+  //this.append('<a class="more">MORE</a>');
+  // this.append('<hr>');
+  var html = compileTemplate(this);
+  $('.projects').append(html);
 
-  $newProject.find('a').html(this.author);
-  $newProject.find('a').attr('href', this.authorUrl);
-  $newProject.find('h1').html(this.title);
-  $newProject.find('.project-body').html(this.body);
-  $newProject.find('time').attr('datetime', this.publishedOn);
-
-  $newProject.find('time[pubdate]').attr('title', this.publishedOn);
-
-  $newProject.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
-  $newProject.append('<a class="more">MORE</a>');
-  $newProject.append('<hr>');
-
-  $newProject.removeClass('template');
-
-  return $newProject;
 };
 
 placeHolder.sort(function(a,b) {
@@ -58,8 +50,8 @@ $(document).ready(function(){
 
 var articleFunctions = {};
 
-articleFunctions.setTeasers = function() {
-  $('.project-body *:nth-of-type(n+2)').hide(); // Hide elements beyond the first 2 in any artcile body.
+articleFunctions.showGlimpse = function() {
+  $('.project-body *:nth-of-type(n+2)').hide(); // Hide elements beyond the first 2 in any article body.
   $('.projects').on('click','.more', function(event){
     event.preventDefault();
     $(this).parent().find('*').show();
@@ -67,7 +59,7 @@ articleFunctions.setTeasers = function() {
   });
 };
 
-articleFunctions.removeTeasers = function(){
+articleFunctions.removeGlimpse = function(){
   $('.projects').on('click','.less', function(event){
     event.preventDefault();
     $('.project-body *:nth-of-type(n+2)').hide();
@@ -75,8 +67,8 @@ articleFunctions.removeTeasers = function(){
   });
 };
 
-articleFunctions.setTeasers();
-articleFunctions.removeTeasers();
+articleFunctions.showGlimpse();
+articleFunctions.removeGlimpse();
 
 //had to make a change
 // var test = this.publishedOn;

@@ -1,3 +1,13 @@
+h1{
+  color:#535353;
+  min-width: 50%;
+  margin: auto;
+}
+
+h3{
+  margin: none;
+}
+
 body{
   background: linear-gradient(to bottom right,#DCDCDC,#F0FFFF);
   padding: 1em;
@@ -11,16 +21,10 @@ a:link{
   color:#69BE28;
 }
 
-
-h3{
-  margin: none;
-}
-
 hr {
   width: 100%;
 }
 
-h1{
-  /*color:#A5ACAF;*/
-  color:#535353
+html {
+  font-family: 'Open Sans', sans-serif;
 }

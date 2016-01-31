@@ -8,6 +8,29 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/state.css">
     <link rel="stylesheet" href="styles/modules.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu:300'>
+    <script id="project-template" type="text/x-handlebars-template">
+      <article class="hb-template" data-category="{{category}}">
+        <header>
+          <h1>{{title}}</h1>
+          <div class="line">
+            By <address><a href="">{{authorName}}</a></address>
+            {{publishedOn}} <time pubdate datetime="2000-01-01">{{publishStatus}}</time>
+          </div>
+        </header>
+        <div class="images/ratings">
+          <img src="images/thumbsUp.svg" alt="" class ="thumbs-up"/>
+          <div class="count-up">
+          </div>
+          <img src="images/thumbsDown.svg" alt="" class ="thumbs-down"/>
+          <div class="count-down">
+          </div>
+        </div>
+      </header>
+      <section class="project-body">{{{body}}}</section>
+    </article>
+    </script>
   </head>
     <header class="top-header">
         <h1>Welcome to my Online Portfolio</h1>
@@ -26,7 +49,7 @@
   </div>
   <main>
       <section class="projects">
-          <article class="template" data-category="cat">
+          <!-- <article class="template" data-category="cat">
             <header>
               <h1>Title</h1>
               <div class="line">
@@ -43,7 +66,7 @@
               </div>
             </header>
             <section class="project-body"></section>
-          </article>
+          </article> -->
         </section>
         <footer class="about-me">
           <p>
@@ -56,6 +79,7 @@
 <!-- idea: add a place where users can provide feedback via email -->
 </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
   <script src="scripts/projects.js" charset="utf-8"></script>
   <script src="scripts/portfolio.js" charset="utf-8"></script>
   </script>
