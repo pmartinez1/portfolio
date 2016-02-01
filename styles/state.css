@@ -3,6 +3,8 @@
 }
 .more, .less {
   opacity: 1;
+  border-style: dotted;
+  border-width: thin;
 }
 
 a:hover{

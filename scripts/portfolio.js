@@ -16,7 +16,7 @@ Project.prototype.toHtml = function() {
   this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
   this.publishStatus = this.publishedOn ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
   this.more = '<a class="more">MORE</a>';
-  //this.append('<a class="more">MORE</a>');
+  this.hr = '<hr>';
   // this.append('<hr>');
   var html = compileTemplate(this);
   $('.projects').append(html);
