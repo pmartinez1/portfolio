@@ -19,7 +19,7 @@
             {{publishedOn}} <time pubdate datetime="2000-01-01">{{publishStatus}}</time>
           </div>
         </header>
-        <div class="images/ratings">
+        <div class="ratings">
           <img src="images/thumbsUp.svg" alt="" class ="thumbs-up"/>
           <div class="count-up">
           </div>
@@ -51,24 +51,6 @@
   </div>
   <main>
       <section class="projects">
-          <!-- <article class="template" data-category="cat">
-            <header>
-              <h1>Title</h1>
-              <div class="line">
-                By <address><a href="">Author Name</a></address>
-                published <time pubdate datetime="2000-01-01">Publish Time</time>
-              </div>
-              <div class="images/ratings">
-                <img src="images/thumbsUp.svg" alt="" class ="thumbs-up"/>
-                <div class="count-up">
-                </div>
-                <img src="images/thumbsDown.svg" alt="" class ="thumbs-down"/>
-                <div class="count-down">
-                </div>
-              </div>
-            </header>
-            <section class="project-body"></section>
-          </article> -->
         </section>
         <footer class="about-me">
           <p>
@@ -82,8 +64,12 @@
 </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.js"></script>
   <script src="scripts/projects.js" charset="utf-8"></script>
   <script src="scripts/portfolio.js" charset="utf-8"></script>
+  <script src="scripts/projectView.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    Project.fetchAll();
   </script>
   </body>
 </html>
