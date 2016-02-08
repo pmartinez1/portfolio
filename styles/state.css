@@ -1,0 +1,16 @@
+.hide {
+  display: none;
+}
+.more, .less {
+  opacity: 1;
+  border-style: dotted;
+  border-width: thin;
+}
+
+a:hover{
+  color: #FFFFFF;
+}
+
+a:active{
+  color: #FB4F14;
+}

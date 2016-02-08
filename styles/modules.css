@@ -1,0 +1,22 @@
+/*
+Rating System Styles
+*/
+.count-up{
+  display: inline-block;
+  font-style: italic;
+}
+
+.count-down{
+  display: inline-block;
+  font-style: italic;
+}
+
+.thumbs-up{
+  width:2em;
+  height: 2em;
+}
+
+.thumbs-down{
+  width: 2em;
+  height: 2em;
+}
