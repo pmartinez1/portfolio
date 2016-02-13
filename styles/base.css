@@ -1,0 +1,30 @@
+h1{
+  color:#535353;
+  min-width: 50%;
+  margin: auto;
+}
+
+h3{
+  margin: none;
+}
+
+body{
+  background: linear-gradient(to bottom right,#DCDCDC,#F0FFFF);
+  padding: 1em;
+}
+
+a{
+  padding: .25em;
+}
+
+a:link{
+  color:#69BE28;
+}
+
+hr {
+  width: 100%;
+}
+
+html {
+  font-family: 'Open Sans', sans-serif;
+}
