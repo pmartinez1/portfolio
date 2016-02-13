@@ -40,5 +40,6 @@
     }
   );
   });
+
   module.articleFunctions = articleFunctions;
 })(window);

@@ -28,8 +28,8 @@
       return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
     });
 
-    rawData.forEach(function(ele) {
-      Project.all.push(new Project(ele));
+    Project.all = rawData.map(function(ele) {
+      return new Project(ele);
     });
   };
 
@@ -45,6 +45,17 @@
         articleFunctions.initIndexPage();
       });
     }
+  };
+
+  Project.numWordsAll = function() {
+    return Article.all.map(function(element) {
+      // console.log(element.body.split(' '));
+      return element.body.split(' ').length;
+    })
+    .reduce(function(a, b) {
+      // console.log(a,b);
+      return a + b;
+    },0);
   };
 
 //had to make a change
