@@ -35,11 +35,13 @@
   Project.fetchAll = function(view) {
     if (localStorage.rawData) {
       Project.loadAll(JSON.parse(localStorage.rawData));
+      articleFunctions.initIndexPage();
       view();
     } else {
       $.getJSON('data/inform.json', function(data) {
         Project.loadAll(data);
         localStorage.rawData = JSON.stringify(data);
+        articleFunctions.initIndexPage();
         view();
       });
     }
@@ -55,6 +57,14 @@
         };
         return list;
       },[]);
+  };
+
+  Project.objectifyAuths = function() {
+    return Project.uniqueAuthors().map(function(author) {
+      return {
+        name: author
+      };
+    });
   };
 
 //had to make a change

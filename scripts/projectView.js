@@ -44,9 +44,8 @@
   articleFunctions.initUnique = function() {
     var authorTemplate = $('#unique-author').html();
     var template = Handlebars.compile(authorTemplate);
-    Project.uniqueAuthors().forEach(function(author) {
-      console.log(author);
-      $('.unique-author').append('<li>' + author + '</li>');
+    Project.objectifyAuths().forEach(function(author) {
+      $('.unique-author').append(template(author));
     });
   };
 
