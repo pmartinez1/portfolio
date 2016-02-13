@@ -32,30 +32,30 @@
     });
   };
 
-  Project.fetchAll = function() {
+  Project.fetchAll = function(view) {
     if (localStorage.rawData) {
       Project.loadAll(JSON.parse(localStorage.rawData));
-      articleFunctions.initIndexPage();
+      view();
     } else {
       $.getJSON('data/inform.json', function(data) {
-        console.log(data);
         Project.loadAll(data);
         localStorage.rawData = JSON.stringify(data);
-        articleFunctions.initIndexPage();
+        view();
       });
     }
   };
 
-  // Project. = function() {
-  //   return Article.all.map(function(element) {
-  //     // console.log(element.body.split(' '));
-  //     return element.body.split(' ').length;
-  //   })
-  //   .reduce(function(a, b) {
-  //     // console.log(a,b);
-  //     return a + b;
-  //   },0);
-  // };
+  Project.uniqueAuthors = function() {
+    return Project.all.map(function(element){
+      return element.author;
+    })
+      .reduce(function(list, author){
+        if(list.indexOf(author) === -1){
+          list.push(author);
+        };
+        return list;
+      },[]);
+  };
 
 //had to make a change
 // var test = this.publishedOn;

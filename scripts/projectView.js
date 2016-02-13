@@ -41,5 +41,14 @@
   );
   });
 
+  articleFunctions.initUnique = function() {
+    var authorTemplate = $('#unique-author').html();
+    var template = Handlebars.compile(authorTemplate);
+    Project.uniqueAuthors().forEach(function(author) {
+      console.log(author);
+      $('.unique-author').append('<li>' + author + '</li>');
+    });
+  };
+
   module.articleFunctions = articleFunctions;
 })(window);

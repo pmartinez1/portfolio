@@ -52,6 +52,14 @@
   <main>
       <section class="projects">
         </section>
+         <section id="unique">
+        <h2>Current Contributors</h2>
+        <ul class="unique-author">
+          <script id="unique-author" type="text/x-handlebars-template">
+            <li>{{author}}</li>
+          </script>
+        </ul>
+      </section>
         <footer class="about-me">
           <p>
             <img src="images/pic.jpeg" alt="" class = "pablo-pic"/>I hope that you are interested in seeing my growth on my journey to learning how to properly build web apps. My site will easily allow you to see my progress on my journey.
@@ -65,11 +73,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.js"></script>
-  <script src="scripts/projects.js" charset="utf-8"></script>
   <script src="scripts/portfolio.js" charset="utf-8"></script>
   <script src="scripts/projectView.js" charset="utf-8"></script>
   <script type="text/javascript">
-    Project.fetchAll();
+    Project.fetchAll(articleFunctions.initUnique);
   </script>
   </body>
 </html>
