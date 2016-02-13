@@ -16,7 +16,6 @@
 
     this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
     this.publishStatus = this.publishedOn ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
-    this.body = this.body;
     this.more = '<a class="more">MORE</a>';
     this.hr = '<hr>';
 
@@ -47,16 +46,16 @@
     }
   };
 
-  Project.numWordsAll = function() {
-    return Article.all.map(function(element) {
-      // console.log(element.body.split(' '));
-      return element.body.split(' ').length;
-    })
-    .reduce(function(a, b) {
-      // console.log(a,b);
-      return a + b;
-    },0);
-  };
+  // Project. = function() {
+  //   return Article.all.map(function(element) {
+  //     // console.log(element.body.split(' '));
+  //     return element.body.split(' ').length;
+  //   })
+  //   .reduce(function(a, b) {
+  //     // console.log(a,b);
+  //     return a + b;
+  //   },0);
+  // };
 
 //had to make a change
 // var test = this.publishedOn;
