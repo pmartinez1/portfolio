@@ -1,7 +1,9 @@
+(function(module){
+
   var articleFunctions = {};
 
   articleFunctions.showGlimpse = function() {
-    $('.project-body *:nth-of-type(n+2)').hide(); 
+    $('.project-body *:nth-of-type(n+2)').hide();
     $('.projects').on('click','.more', function(event){
       event.preventDefault();
       $(this).parent().find('*').show();
@@ -38,3 +40,5 @@
     }
   );
   });
+  module.articleFunctions = articleFunctions;
+})(window);
